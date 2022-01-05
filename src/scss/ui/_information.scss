@@ -1,0 +1,46 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.information {
+  padding: 0 0 5rem 0;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  @include m.desktop {
+    max-width: 120rem;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    flex: 1;
+
+  }
+
+  &__name {
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: v.$darkGray;
+  }
+
+  &__icon {
+    color: v.$lightGray;
+    font-size: 5rem;
+    opacity: .6;
+  }
+
+  &__text {
+    color: v.$lightGray;
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.clients {
+  padding: 10rem 0;
+  @include m.grid(1,8rem);
+  align-items: center;
+  justify-items: center;
+  @include m.desktop { 
+    @include m.grid(5,2rem);
+  }
+}

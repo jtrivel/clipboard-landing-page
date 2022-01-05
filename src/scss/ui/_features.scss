@@ -1,0 +1,82 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.features {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: v.$darkGray;
+    @include m.desktop { 
+      font-size: 3rem;
+    }
+  }
+
+  &__subheading {
+    color: v.$lightGray;
+    @include m.tablet {
+      max-width: 50%;
+    }
+  }
+
+  &__computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    @include m.desktop {
+      margin-left: -10rem ;
+      text-align: left;
+      flex-direction: row;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    line-height: 1.7;
+    @include m.desktop {
+      text-align: left;
+      align-items: flex-start;
+    }
+    @include m.desktopXL {
+      max-width: 60%;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: v.$darkGray;
+  }
+
+  &__desc {
+    color: v.$lightGray;
+  }
+}

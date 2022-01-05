@@ -1,0 +1,99 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer {
+  margin-top: 10rem;
+  padding: 3rem 0;
+  background-color: v.$footerBg;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    @include m.desktop { 
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include m.desktop { 
+      gap: 6rem;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+
+  &__logo {
+    width: 5rem;
+    margin-inline: auto ;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    @include m.desktop { 
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: v.$darkGray;
+    position: relative;
+    transition: all 250ms ease;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: v.$strongCyan;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 250ms ease;
+    }
+    &:hover::before{
+      transform: scaleX(1);
+    }
+    &:hover{
+      color: v.$strongCyan;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 2 rem;
+  }
+
+  &__socials {
+    gap: 2rem;
+    font-size: 2rem;
+    color: v.$darkGray;
+    transition: all .7s ease;
+    cursor: pointer;
+    &:hover {
+      transform: rotateY(90deg);
+      color: v.$strongCyan;
+    }
+  }
+
+}
