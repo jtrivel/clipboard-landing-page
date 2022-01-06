@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/fylo-data-storage-component-solution-with-flexbox-aa8jdoG4u)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/clipboard-landing-page-solution-with-grid-and-flexbox-huRgPUKyK)
 - Live Site URL: [Live Site URL](https://clipboard-landing-page001.netlify.app/)
 
 ### Built with
